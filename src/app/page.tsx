@@ -200,6 +200,18 @@ export default function Home() {
                 <div className="h-10" />
               )}
             </div>
+            <p className="mt-6 text-center text-sm text-muted-foreground">
+              We offer our customers a wide product range. Our collection
+              ranges from stationery products such as business cards or
+              letterheads to brochures, flyers and leaflets with high-quality
+              finishing or advertising technology products like roller banners,
+              tarpaulins and exhibition counters. State-of-the-art printing
+              presses and our highly qualified team guarantee professional
+              print products of exceptional quality at affordable prices. We are
+              continually optimising and expanding our product portfolio, so
+              that you and your customers are fully equipped for your
+              business, advertising and trade fair needs.
+            </p>
 
             <Separator className="my-6 bg-border/50" />
 
