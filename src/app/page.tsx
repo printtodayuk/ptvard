@@ -7,7 +7,6 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -144,7 +143,7 @@ export default function Home() {
             >
               <CompanyLogo className="h-10 w-auto" />
             </a>
-            <CardDescription className="text-base text-muted-foreground">
+            <CardDescription className="text-lg font-semibold text-foreground">
               Same Day Print & Delivery
             </CardDescription>
           </CardHeader>
