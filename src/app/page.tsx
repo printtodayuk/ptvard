@@ -94,11 +94,12 @@ export default function Home() {
       "END:VCARD",
     ].join("\n");
     const blob = new Blob([vCard], { type: "text/vcard" });
-    setVCardUrl(URL.createObjectURL(blob));
+    const url = URL.createObjectURL(blob);
+    setVCardUrl(url);
 
     // Cleanup the object URL on component unmount
     return () => {
-      URL.revokeObjectURL(vCardUrl);
+      URL.revokeObjectURL(url);
     };
   }, []);
 
@@ -180,7 +181,7 @@ export default function Home() {
               PrintTodayUK
             </CardTitle>
             <CardDescription className="text-base text-muted-foreground">
-              Your One-Stop Printing Solution
+              Same Day Print & Delivery
             </CardDescription>
           </CardHeader>
 
