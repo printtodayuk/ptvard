@@ -1,3 +1,6 @@
+
+"use client";
+
 import {
   Card,
   CardContent,
@@ -18,11 +21,13 @@ import {
   Linkedin,
   Twitter,
   Youtube,
+  Download,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { CompanyLogo } from "@/components/company-logo";
 import { QrCodeGenerator } from "@/components/qr-code-generator";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import { useEffect, useState } from "react";
 
 const ContactItem = ({
   icon,
@@ -67,6 +72,26 @@ const SocialLink = ({
 );
 
 export default function Home() {
+  const [vCardUrl, setVCardUrl] = useState<string>("");
+
+  useEffect(() => {
+    const vCard = [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      "FN:PrintTodayUK",
+      "ORG:PrintTodayUK",
+      "TITLE:Your One-Stop Printing Solution",
+      "TEL;TYPE=WORK,VOICE:+447969559746",
+      "EMAIL:info@printtodayuk.com",
+      "URL;type=WORK:https://printtodayuk.com",
+      `URL;type=pref:${window.location.href}`,
+      "ADR;TYPE=WORK:;;;Find us on Google Maps;;;",
+      "END:VCARD",
+    ].join("\n");
+    const blob = new Blob([vCard], { type: "text/vcard" });
+    setVCardUrl(URL.createObjectURL(blob));
+  }, []);
+
   const contactDetails = [
     {
       icon: <Phone className="h-5 w-5" />,
@@ -152,9 +177,16 @@ export default function Home() {
           <CardContent className="p-6">
             <div className="flex flex-col items-center gap-4">
               <QrCodeGenerator />
-              <p className="text-center text-sm text-muted-foreground">
-                Scan me to save my contact card!
-              </p>
+              {vCardUrl ? (
+                <Button asChild variant="outline" className="rounded-xl">
+                  <a href={vCardUrl} download="PrintTodayUK.vcf">
+                    <Download className="mr-2 h-4 w-4" />
+                    Save Contact Card
+                  </a>
+                </Button>
+              ) : (
+                <div className="h-10" />
+              )}
             </div>
 
             <Separator className="my-6 bg-border/50" />
@@ -197,3 +229,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
