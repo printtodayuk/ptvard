@@ -144,9 +144,6 @@ export default function Home() {
             >
               <CompanyLogo className="h-10 w-auto" />
             </a>
-            <CardTitle className="font-headline text-3xl font-extrabold text-primary">
-              PrintTodayUK
-            </CardTitle>
             <CardDescription className="text-base text-muted-foreground">
               Same Day Print & Delivery
             </CardDescription>
