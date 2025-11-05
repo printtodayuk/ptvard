@@ -72,9 +72,14 @@ const SocialLink = ({
 );
 
 export default function Home() {
+  const [pageUrl, setPageUrl] = useState<string>("");
   const [vCardUrl, setVCardUrl] = useState<string>("");
 
   useEffect(() => {
+    // This ensures the code runs only on the client, after hydration
+    const currentUrl = window.location.href;
+    setPageUrl(currentUrl);
+
     const vCard = [
       "BEGIN:VCARD",
       "VERSION:3.0",
@@ -84,12 +89,17 @@ export default function Home() {
       "TEL;TYPE=WORK,VOICE:+447969559746",
       "EMAIL:info@printtodayuk.com",
       "URL;type=WORK:https://printtodayuk.com",
-      `URL;type=pref:${window.location.href}`,
+      `URL;type=pref:${currentUrl}`,
       "ADR;TYPE=WORK:;;;Find us on Google Maps;;;",
       "END:VCARD",
     ].join("\n");
     const blob = new Blob([vCard], { type: "text/vcard" });
     setVCardUrl(URL.createObjectURL(blob));
+
+    // Cleanup the object URL on component unmount
+    return () => {
+      URL.revokeObjectURL(vCardUrl);
+    };
   }, []);
 
   const contactDetails = [
@@ -176,7 +186,7 @@ export default function Home() {
 
           <CardContent className="p-6">
             <div className="flex flex-col items-center gap-4">
-              <QrCodeGenerator />
+              <QrCodeGenerator url={pageUrl} />
               {vCardUrl ? (
                 <Button asChild variant="outline" className="rounded-xl">
                   <a href={vCardUrl} download="PrintTodayUK.vcf">
@@ -229,5 +239,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

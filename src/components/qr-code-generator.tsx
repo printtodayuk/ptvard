@@ -1,17 +1,10 @@
+
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export function QrCodeGenerator() {
-  const [url, setUrl] = useState<string>("");
-
-  useEffect(() => {
-    // This ensures the code runs only on the client, after hydration
-    setUrl(window.location.href);
-  }, []);
-
+export function QrCodeGenerator({ url }: { url: string }) {
   if (!url) {
     return (
       <div className="flex items-center justify-center p-2">
