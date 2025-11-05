@@ -21,14 +21,11 @@ import {
   Linkedin,
   Twitter,
   Youtube,
-  Download,
   Star,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { CompanyLogo } from "@/components/company-logo";
-import { QrCodeGenerator } from "@/components/qr-code-generator";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
-import { useEffect, useState } from "react";
 
 const ContactItem = ({
   icon,
@@ -73,37 +70,6 @@ const SocialLink = ({
 );
 
 export default function Home() {
-  const [pageUrl, setPageUrl] = useState<string>("");
-  const [vCardUrl, setVCardUrl] = useState<string>("");
-
-  useEffect(() => {
-    // This ensures the code runs only on the client, after hydration
-    const currentUrl = window.location.href;
-    setPageUrl(currentUrl);
-
-    const vCard = [
-      "BEGIN:VCARD",
-      "VERSION:3.0",
-      "FN:PrintTodayUK",
-      "ORG:PrintTodayUK",
-      "TITLE:Your One-Stop Printing Solution",
-      "TEL;TYPE=WORK,VOICE:+447969559746",
-      "EMAIL:info@printtodayuk.com",
-      "URL;type=WORK:https://printtodayuk.com",
-      `URL;type=pref:${currentUrl}`,
-      "ADR;TYPE=WORK:;;;Find us on Google Maps;;;",
-      "END:VCARD",
-    ].join("\n");
-    const blob = new Blob([vCard], { type: "text/vcard" });
-    const url = URL.createObjectURL(blob);
-    setVCardUrl(url);
-
-    // Cleanup the object URL on component unmount
-    return () => {
-      URL.revokeObjectURL(url);
-    };
-  }, []);
-
   const contactDetails = [
     {
       icon: <Phone className="h-5 w-5" />,
@@ -187,19 +153,6 @@ export default function Home() {
           </CardHeader>
 
           <CardContent className="p-6">
-            <div className="flex flex-col items-center gap-4">
-              <QrCodeGenerator url={pageUrl} />
-              {vCardUrl ? (
-                <Button asChild variant="outline" className="rounded-xl">
-                  <a href={vCardUrl} download="PrintTodayUK.vcf">
-                    <Download className="mr-2 h-4 w-4" />
-                    Save Contact Card
-                  </a>
-                </Button>
-              ) : (
-                <div className="h-10" />
-              )}
-            </div>
             <p className="mt-6 text-center text-sm text-muted-foreground">
               We offer our customers a wide product range. Our collection
               ranges from stationery products such as business cards or
