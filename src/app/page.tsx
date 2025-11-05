@@ -22,6 +22,7 @@ import {
   Twitter,
   Youtube,
   Download,
+  Star,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { CompanyLogo } from "@/components/company-logo";
@@ -232,6 +233,15 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <Globe className="mr-2 h-5 w-5" /> Visit Our Website
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full rounded-xl">
+              <a
+                href="https://g.page/r/CdtujWes0srmEAE/review"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Star className="mr-2 h-5 w-5" /> Give us a review
               </a>
             </Button>
           </CardFooter>
