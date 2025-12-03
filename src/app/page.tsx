@@ -77,6 +77,11 @@ export default function Home() {
       text: "+44 7969 559746",
     },
     {
+      icon: <Phone className="h-5 w-5" />,
+      href: "tel:03300103521",
+      text: "0330 010 3521",
+    },
+    {
       icon: <WhatsappIcon className="h-5 w-5" />,
       href: "https://wa.me/447969559746",
       text: "WhatsApp Message",
