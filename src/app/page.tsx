@@ -149,21 +149,6 @@ export default function Home() {
           </CardHeader>
 
           <CardContent className="p-6">
-            <p className="mt-6 text-center text-sm text-muted-foreground">
-              We offer our customers a wide product range. Our collection
-              ranges from stationery products such as business cards or
-              letterheads to brochures, flyers and leaflets with high-quality
-              finishing or advertising technology products like roller banners,
-              tarpaulins and exhibition counters. State-of-the-art printing
-              presses and our highly qualified team guarantee professional
-              print products of exceptional quality at affordable prices. We are
-              continually optimising and expanding our product portfolio, so
-              that you and your customers are fully equipped for your
-              business, advertising and trade fair needs.
-            </p>
-
-            <Separator className="my-6 bg-border/50" />
-
             <div className="flex flex-col space-y-1">
               {contactDetails.map((item, index) => (
                 <ContactItem key={index} icon={item.icon} href={item.href}>
@@ -184,6 +169,19 @@ export default function Home() {
                 />
               ))}
             </div>
+            
+            <p className="mt-6 text-center text-sm text-muted-foreground">
+              We offer our customers a wide product range. Our collection
+              ranges from stationery products such as business cards or
+              letterheads to brochures, flyers and leaflets with high-quality
+              finishing or advertising technology products like roller banners,
+              tarpaulins and exhibition counters. State-of-the-art printing
+              presses and our highly qualified team guarantee professional
+              print products of exceptional quality at affordable prices. We are
+              continually optimising and expanding our product portfolio, so
+              that you and your customers are fully equipped for your
+              business, advertising and trade fair needs.
+            </p>
           </CardContent>
 
           <CardFooter className="flex-col gap-4 bg-primary/5 p-6">
