@@ -21,6 +21,7 @@ import {
   Twitter,
   Youtube,
   Star,
+  ShoppingBag,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { CompanyLogo } from "@/components/company-logo";
@@ -159,6 +160,16 @@ export default function Home() {
 
             <Separator className="my-6 bg-border/50" />
 
+            <Button asChild size="lg" className="w-full rounded-xl mb-6">
+              <a
+                href="https://ptpos.vercel.app/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ShoppingBag className="mr-2 h-5 w-5" /> Place Order
+              </a>
+            </Button>
+
             <div className="flex justify-center gap-6">
               {socialLinks.map((social) => (
                 <SocialLink
@@ -181,7 +192,12 @@ export default function Home() {
                 <Globe className="mr-2 h-5 w-5" /> Visit Our Website
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="w-full rounded-xl">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="w-full rounded-xl"
+            >
               <a
                 href="https://g.page/r/CdtujWes0srmEAE/review"
                 target="_blank"
@@ -190,10 +206,13 @@ export default function Home() {
                 <Star className="mr-2 h-5 w-5" /> Give us a review
               </a>
             </Button>
-            <p className="mt-6 text-center text-sm text-muted-foreground">
-              We provide a wide range of professional printing, from business cards and flyers to large-format products like banners. Our expert team and modern equipment ensure high-quality results at affordable prices.
-            </p>
           </CardFooter>
+          <p className="bg-primary/5 p-6 pt-0 text-center text-sm text-muted-foreground">
+            We provide a wide range of professional printing, from business
+            cards and flyers to large-format products like banners. Our expert
+            team and modern equipment ensure high-quality results at affordable
+            prices.
+          </p>
         </Card>
       </main>
     </div>
