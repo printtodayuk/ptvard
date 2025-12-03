@@ -169,19 +169,6 @@ export default function Home() {
                 />
               ))}
             </div>
-            
-            <p className="mt-6 text-center text-sm text-muted-foreground">
-              We offer our customers a wide product range. Our collection
-              ranges from stationery products such as business cards or
-              letterheads to brochures, flyers and leaflets with high-quality
-              finishing or advertising technology products like roller banners,
-              tarpaulins and exhibition counters. State-of-the-art printing
-              presses and our highly qualified team guarantee professional
-              print products of exceptional quality at affordable prices. We are
-              continually optimising and expanding our product portfolio, so
-              that you and your customers are fully equipped for your
-              business, advertising and trade fair needs.
-            </p>
           </CardContent>
 
           <CardFooter className="flex-col gap-4 bg-primary/5 p-6">
@@ -203,6 +190,9 @@ export default function Home() {
                 <Star className="mr-2 h-5 w-5" /> Give us a review
               </a>
             </Button>
+            <p className="mt-6 text-center text-sm text-muted-foreground">
+              We provide a wide range of professional printing, from business cards and flyers to large-format products like banners. Our expert team and modern equipment ensure high-quality results at affordable prices.
+            </p>
           </CardFooter>
         </Card>
       </main>
