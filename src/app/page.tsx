@@ -152,6 +152,15 @@ export default function Home() {
             <CardDescription className="text-lg font-semibold text-foreground">
               Same Day Print & Delivery
             </CardDescription>
+            <Button asChild size="lg" className="w-full rounded-xl mt-4">
+              <a
+                href="https://ptpos.vercel.app/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ShoppingBag className="mr-2 h-5 w-5" /> Place Order
+              </a>
+            </Button>
           </CardHeader>
 
           <CardContent className="p-6">
@@ -164,16 +173,6 @@ export default function Home() {
             </div>
 
             <Separator className="my-6 bg-border/50" />
-
-            <Button asChild size="lg" className="w-full rounded-xl mb-6">
-              <a
-                href="https://ptpos.vercel.app/contact"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ShoppingBag className="mr-2 h-5 w-5" /> Place Order
-              </a>
-            </Button>
 
             <div className="flex justify-center gap-6">
               {socialLinks.map((social) => (
