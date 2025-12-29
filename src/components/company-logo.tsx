@@ -27,8 +27,8 @@ export function CompanyLogo({ className }: { className?: string }) {
     <Image
       src={logoImage.imageUrl}
       alt="PrintTodayUK Logo"
-      width={300}
-      height={75}
+      width={450}
+      height={113}
       className={className}
       data-ai-hint={logoImage.imageHint}
       priority
