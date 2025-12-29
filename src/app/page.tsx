@@ -47,7 +47,7 @@ const ContactItem = ({
     rel="noopener noreferrer"
     className="group flex items-center space-x-4 rounded-lg p-3 transition-colors hover:bg-gray-100"
   >
-    <div className={cn("rounded-full p-2", iconClassName ? "" : "bg-accent/20 text-accent group-hover:bg-accent group-hover:text-accent-foreground")}>
+    <div className={cn("rounded-full p-2", iconClassName)}>
       {icon}
     </div>
     <span className="font-medium text-foreground">{children}</span>
