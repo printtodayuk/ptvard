@@ -28,6 +28,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt
 } from "react-icons/fa";
+import { cn } from "@/lib/utils";
 
 const ContactItem = ({
   icon,
@@ -55,17 +56,19 @@ const SocialLink = ({
   href,
   icon,
   "aria-label": ariaLabel,
+  className,
 }: {
   href: string;
   icon: ReactNode;
   "aria-label": string;
+  className?: string;
 }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
     aria-label={ariaLabel}
-    className="text-muted-foreground transition-colors hover:text-primary"
+    className={cn("transition-opacity hover:opacity-80", className)}
   >
     {icon}
   </a>
@@ -115,26 +118,31 @@ export default function Home() {
       href: "https://www.facebook.com/PrintTodayUK",
       icon: <FaFacebook className="h-6 w-6" />,
       label: "Facebook",
+      colorClass: "text-[#1877F2]",
     },
     {
       href: "https://www.instagram.com/printtodayuk/",
       icon: <FaInstagram className="h-6 w-6" />,
       label: "Instagram",
+      colorClass: "text-[#E4405F]",
     },
     {
       href: "https://www.linkedin.com/in/printtoday-uk",
       icon: <FaLinkedin className="h-6 w-6" />,
       label: "LinkedIn",
+      colorClass: "text-[#0A66C2]",
     },
     {
       href: "https://twitter.com/PrintToday_uk",
       icon: <FaTwitter className="h-6 w-6" />,
       label: "Twitter",
+      colorClass: "text-[#1DA1F2]",
     },
     {
       href: "https://www.youtube.com/@printtodayuk",
       icon: <FaYoutube className="h-6 w-6" />,
       label: "YouTube",
+      colorClass: "text-[#FF0000]",
     },
   ];
 
@@ -184,6 +192,7 @@ export default function Home() {
                   href={social.href}
                   icon={social.icon}
                   aria-label={social.label}
+                  className={social.colorClass}
                 />
               ))}
             </div>
