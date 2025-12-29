@@ -84,7 +84,7 @@ export default function Home() {
     {
       icon: <WhatsappIcon className="h-5 w-5" />,
       href: "https://wa.me/447969559746",
-      text: "WhatsApp Message",
+      text: "Live Chat",
     },
     {
       icon: <Mail className="h-5 w-5" />,
