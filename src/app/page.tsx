@@ -200,16 +200,32 @@ export default function Home() {
 
             <Separator className="my-6 bg-border/50" />
 
-            <div className="flex justify-center gap-6">
-              {socialLinks.map((social) => (
-                <SocialLink
-                  key={social.label}
-                  href={social.href}
-                  icon={social.icon}
-                  aria-label={social.label}
-                  className={social.colorClass}
-                />
-              ))}
+            <div className="flex flex-col gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="w-full rounded-xl"
+                style={{ backgroundColor: '#C8102E' }}
+              >
+                <a
+                  href="https://g.page/r/CdtujWes0srmEAE/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Star className="mr-2 h-5 w-5" /> Give us a review
+                </a>
+              </Button>
+              <div className="flex justify-center gap-6">
+                {socialLinks.map((social) => (
+                  <SocialLink
+                    key={social.label}
+                    href={social.href}
+                    icon={social.icon}
+                    aria-label={social.label}
+                    className={social.colorClass}
+                  />
+                ))}
+              </div>
             </div>
           </CardContent>
 
@@ -223,20 +239,7 @@ export default function Home() {
                 <Globe className="mr-2 h-5 w-5" /> Visit Our Website
               </a>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="w-full rounded-xl"
-            >
-              <a
-                href="https://g.page/r/CdtujWes0srmEAE/review"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Star className="mr-2 h-5 w-5" /> Give us a review
-              </a>
-            </Button>
+            
             <p className="pt-2 text-center text-sm text-muted-foreground">
               We provide a wide range of professional printing, from business
               cards and flyers to large-format products like banners. Our expert
