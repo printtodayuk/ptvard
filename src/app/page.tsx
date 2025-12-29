@@ -80,12 +80,6 @@ export default function Home() {
   const contactDetails = [
     {
       icon: <FaPhone className="h-5 w-5 text-white" />,
-      href: "tel:+447969559746",
-      text: "+44 7969 559746",
-      iconClassName: "bg-blue-500",
-    },
-    {
-      icon: <FaPhone className="h-5 w-5 text-white" />,
       href: "tel:03300103521",
       text: "0330 010 3521",
       iconClassName: "bg-blue-500",
@@ -100,19 +94,19 @@ export default function Home() {
       icon: <FaEnvelope className="h-5 w-5 text-white" />,
       href: "mailto:info@printtodayuk.com",
       text: "info@printtodayuk.com",
-      iconClassName: "bg-gray-500",
+      iconClassName: "bg-gray-700",
     },
     {
       icon: <FaEnvelope className="h-5 w-5 text-white" />,
       href: "mailto:sales@printtodayuk.com",
       text: "sales@printtodayuk.com",
-      iconClassName: "bg-gray-500",
+      iconClassName: "bg-gray-700",
     },
     {
       icon: <FaEnvelope className="h-5 w-5 text-white" />,
       href: "mailto:artwork@printtodayuk.com",
       text: "artwork@printtodayuk.com",
-      iconClassName: "bg-gray-500",
+      iconClassName: "bg-gray-700",
     },
     {
       icon: <FaMapMarkerAlt className="h-5 w-5 text-white" />,
