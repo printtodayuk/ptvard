@@ -15,17 +15,19 @@ import {
   Mail,
   MapPin,
   Phone,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Youtube,
   Star,
   Contact,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { CompanyLogo } from "@/components/company-logo";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 const ContactItem = ({
   icon,
@@ -111,27 +113,27 @@ export default function Home() {
   const socialLinks = [
     {
       href: "https://www.facebook.com/PrintTodayUK",
-      icon: <Facebook className="h-6 w-6" />,
+      icon: <FaFacebook className="h-6 w-6" />,
       label: "Facebook",
     },
     {
       href: "https://www.instagram.com/printtodayuk/",
-      icon: <Instagram className="h-6 w-6" />,
+      icon: <FaInstagram className="h-6 w-6" />,
       label: "Instagram",
     },
     {
       href: "https://www.linkedin.com/in/printtoday-uk",
-      icon: <Linkedin className="h-6 w-6" />,
+      icon: <FaLinkedin className="h-6 w-6" />,
       label: "LinkedIn",
     },
     {
       href: "https://twitter.com/PrintToday_uk",
-      icon: <Twitter className="h-6 w-6" />,
+      icon: <FaTwitter className="h-6 w-6" />,
       label: "Twitter",
     },
     {
       href: "https://www.youtube.com/@printtodayuk",
-      icon: <Youtube className="h-6 w-6" />,
+      icon: <FaYoutube className="h-6 w-6" />,
       label: "YouTube",
     },
   ];
