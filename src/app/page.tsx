@@ -241,10 +241,7 @@ export default function Home() {
             </Button>
             
             <p className="pt-2 text-center text-sm text-muted-foreground">
-              We provide a wide range of professional printing, from business
-              cards and flyers to large-format products like banners. Our expert
-              team and modern equipment ensure high-quality results at
-              affordable prices.
+              We've been providing high quality print for over 20 years. Our team of experts is dedicated to delivering outstanding results and we pride ourselves on our commitment to customer service and the environment.
             </p>
           </CardFooter>
         </Card>
