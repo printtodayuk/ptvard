@@ -79,6 +79,12 @@ const SocialLink = ({
 export default function Home() {
   const contactDetails = [
     {
+      icon: <FaPhone className="h-5 w-5 text-white" />,
+      href: "tel:+442038379101",
+      text: "020 3837 9101",
+      iconClassName: "bg-blue-500",
+    },
+    {
       icon: <FaWhatsapp className="h-5 w-5 text-white" />,
       href: "https://wa.me/447969559746",
       text: "Live Chat",
