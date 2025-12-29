@@ -21,7 +21,7 @@ import {
   Twitter,
   Youtube,
   Star,
-  ShoppingBag,
+  Contact,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { CompanyLogo } from "@/components/company-logo";
@@ -147,7 +147,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="mb-4"
             >
-              <CompanyLogo className="h-10 w-auto" />
+              <CompanyLogo className="h-auto w-[450px]" />
             </a>
             <CardDescription className="text-lg font-semibold text-foreground">
               Same Day Print & Delivery
@@ -158,7 +158,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ShoppingBag className="mr-2 h-5 w-5" /> Place Order
+                <Contact className="mr-2 h-5 w-5" /> Contact Details
               </a>
             </Button>
           </CardHeader>
@@ -210,13 +210,13 @@ export default function Home() {
                 <Star className="mr-2 h-5 w-5" /> Give us a review
               </a>
             </Button>
+            <p className="pt-2 text-center text-sm text-muted-foreground">
+              We provide a wide range of professional printing, from business
+              cards and flyers to large-format products like banners. Our expert
+              team and modern equipment ensure high-quality results at
+              affordable prices.
+            </p>
           </CardFooter>
-          <p className="bg-primary/5 p-6 pt-0 text-center text-sm text-muted-foreground">
-            We provide a wide range of professional printing, from business
-            cards and flyers to large-format products like banners. Our expert
-            team and modern equipment ensure high-quality results at affordable
-            prices.
-          </p>
         </Card>
       </main>
     </div>
