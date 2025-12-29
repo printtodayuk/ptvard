@@ -80,8 +80,8 @@ export default function Home() {
   const contactDetails = [
     {
       icon: <FaPhone className="h-5 w-5 text-white" />,
-      href: "tel:+442038379101",
-      text: "020 3837 9101",
+      href: "tel:+443300103521",
+      text: "0330 010 3521",
       iconClassName: "bg-blue-500",
     },
     {
