@@ -161,6 +161,7 @@ export default function Home() {
                 <Contact className="mr-2 h-5 w-5" /> Contact Details
               </a>
             </Button>
+            <p className="pt-2 text-sm text-muted-foreground">We are open 7 days a week</p>
           </CardHeader>
 
           <CardContent className="p-6">
