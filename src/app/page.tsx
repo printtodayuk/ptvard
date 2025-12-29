@@ -79,15 +79,21 @@ const SocialLink = ({
 export default function Home() {
   const contactDetails = [
     {
-      icon: <FaPhone className="h-5 w-5 text-white" />,
-      href: "tel:03300103521",
-      text: "0330 010 3521",
-      iconClassName: "bg-blue-500",
-    },
-    {
       icon: <FaWhatsapp className="h-5 w-5 text-white" />,
       href: "https://wa.me/447969559746",
       text: "Live Chat",
+      iconClassName: "bg-green-500",
+    },
+    {
+      icon: <FaWhatsapp className="h-5 w-5 text-white" />,
+      href: "https://wa.me/4407709135507",
+      text: "Print Today Studio",
+      iconClassName: "bg-green-500",
+    },
+    {
+      icon: <FaWhatsapp className="h-5 w-5 text-white" />,
+      href: "https://wa.me/4407752711508",
+      text: "AI Studio",
       iconClassName: "bg-green-500",
     },
     {
