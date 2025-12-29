@@ -34,18 +34,20 @@ const ContactItem = ({
   icon,
   href,
   children,
+  iconClassName
 }: {
   icon: ReactNode;
   href: string;
   children: ReactNode;
+  iconClassName?: string;
 }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="group flex items-center space-x-4 rounded-lg p-3 transition-colors hover:bg-accent/10"
+    className="group flex items-center space-x-4 rounded-lg p-3 transition-colors hover:bg-gray-100"
   >
-    <div className="rounded-full bg-accent/20 p-2 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+    <div className={cn("rounded-full p-2", iconClassName ? "" : "bg-accent/20 text-accent group-hover:bg-accent group-hover:text-accent-foreground")}>
       {icon}
     </div>
     <span className="font-medium text-foreground">{children}</span>
@@ -77,39 +79,46 @@ const SocialLink = ({
 export default function Home() {
   const contactDetails = [
     {
-      icon: <FaPhone className="h-5 w-5" />,
+      icon: <FaPhone className="h-5 w-5 text-white" />,
       href: "tel:+447969559746",
       text: "+44 7969 559746",
+      iconClassName: "bg-blue-500",
     },
     {
-      icon: <FaPhone className="h-5 w-5" />,
+      icon: <FaPhone className="h-5 w-5 text-white" />,
       href: "tel:03300103521",
       text: "0330 010 3521",
+      iconClassName: "bg-blue-500",
     },
     {
-      icon: <FaWhatsapp className="h-5 w-5" />,
+      icon: <FaWhatsapp className="h-5 w-5 text-white" />,
       href: "https://wa.me/447969559746",
       text: "Live Chat",
+      iconClassName: "bg-green-500",
     },
     {
-      icon: <FaEnvelope className="h-5 w-5" />,
+      icon: <FaEnvelope className="h-5 w-5 text-white" />,
       href: "mailto:info@printtodayuk.com",
       text: "info@printtodayuk.com",
+      iconClassName: "bg-gray-500",
     },
     {
-      icon: <FaEnvelope className="h-5 w-5" />,
+      icon: <FaEnvelope className="h-5 w-5 text-white" />,
       href: "mailto:sales@printtodayuk.com",
       text: "sales@printtodayuk.com",
+      iconClassName: "bg-gray-500",
     },
     {
-      icon: <FaEnvelope className="h-5 w-5" />,
+      icon: <FaEnvelope className="h-5 w-5 text-white" />,
       href: "mailto:artwork@printtodayuk.com",
       text: "artwork@printtodayuk.com",
+      iconClassName: "bg-gray-500",
     },
     {
-      icon: <FaMapMarkerAlt className="h-5 w-5" />,
+      icon: <FaMapMarkerAlt className="h-5 w-5 text-white" />,
       href: "https://maps.app.goo.gl/hyVjEKKv5QDLNqFg9",
       text: "Find us on Google Maps",
+      iconClassName: "bg-red-500",
     },
   ];
 
@@ -177,7 +186,7 @@ export default function Home() {
           <CardContent className="p-6">
             <div className="flex flex-col space-y-1">
               {contactDetails.map((item, index) => (
-                <ContactItem key={index} icon={item.icon} href={item.href}>
+                <ContactItem key={index} icon={item.icon} href={item.href} iconClassName={item.iconClassName}>
                   {item.text}
                 </ContactItem>
               ))}
