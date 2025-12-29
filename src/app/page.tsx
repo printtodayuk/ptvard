@@ -12,21 +12,21 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
   Globe,
-  Mail,
-  MapPin,
-  Phone,
-  Star,
   Contact,
+  Star,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { CompanyLogo } from "@/components/company-logo";
-import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaTwitter,
   FaYoutube,
+  FaWhatsapp,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt
 } from "react-icons/fa";
 
 const ContactItem = ({
@@ -74,37 +74,37 @@ const SocialLink = ({
 export default function Home() {
   const contactDetails = [
     {
-      icon: <Phone className="h-5 w-5" />,
+      icon: <FaPhone className="h-5 w-5" />,
       href: "tel:+447969559746",
       text: "+44 7969 559746",
     },
     {
-      icon: <Phone className="h-5 w-5" />,
+      icon: <FaPhone className="h-5 w-5" />,
       href: "tel:03300103521",
       text: "0330 010 3521",
     },
     {
-      icon: <WhatsappIcon className="h-5 w-5" />,
+      icon: <FaWhatsapp className="h-5 w-5" />,
       href: "https://wa.me/447969559746",
       text: "Live Chat",
     },
     {
-      icon: <Mail className="h-5 w-5" />,
+      icon: <FaEnvelope className="h-5 w-5" />,
       href: "mailto:info@printtodayuk.com",
       text: "info@printtodayuk.com",
     },
     {
-      icon: <Mail className="h-5 w-5" />,
+      icon: <FaEnvelope className="h-5 w-5" />,
       href: "mailto:sales@printtodayuk.com",
       text: "sales@printtodayuk.com",
     },
     {
-      icon: <Mail className="h-5 w-5" />,
+      icon: <FaEnvelope className="h-5 w-5" />,
       href: "mailto:artwork@printtodayuk.com",
       text: "artwork@printtodayuk.com",
     },
     {
-      icon: <MapPin className="h-5 w-5" />,
+      icon: <FaMapMarkerAlt className="h-5 w-5" />,
       href: "https://maps.app.goo.gl/hyVjEKKv5QDLNqFg9",
       text: "Find us on Google Maps",
     },
