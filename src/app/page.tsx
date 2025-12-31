@@ -172,7 +172,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="mb-4"
             >
-              <CompanyLogo className="h-auto w-[450px]" />
+              <CompanyLogo className="h-auto w-[315px]" />
             </a>
             <CardDescription className="text-lg font-semibold text-foreground">
               Same Day Print & Delivery
